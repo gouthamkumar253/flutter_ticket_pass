@@ -1,8 +1,8 @@
-name: flutter_ticket_package
+name: ticket_pass_package
 description: A new Flutter package.
 version: 0.0.1
-author:
-homepage:
+author: Goutham Kumar R <gouthamr1998@gmail.com>
+homepage: https://github.com/gouthamkumar253/flutter_ticket_pass
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

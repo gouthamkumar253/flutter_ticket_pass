@@ -17,7 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  flutter_ticket_package:
+  ticket_pass_package:
     path: ../../
   flutter:
     sdk: flutter

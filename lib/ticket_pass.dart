@@ -1,8 +1,8 @@
-library flutter_ticket_package;
+library ticket_pass_package;
 
 import 'package:fading_edge_scrollview/fading_edge_scrollview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ticket_package/dash_separator.dart';
+import 'package:ticket_pass_package/dash_separator.dart';
 
 class TicketPass extends StatefulWidget {
   const TicketPass({
@@ -53,7 +53,6 @@ class TicketPass extends StatefulWidget {
       ),
     ),
     this.expansionChild,
-    this.purchaserDetailsTile,
   });
 
   final double width;
@@ -77,7 +76,6 @@ class TicketPass extends StatefulWidget {
   final Text ticketTitle;
   final Widget expansionChild;
   final List<String> purchaserList;
-  final ListTile purchaserDetailsTile;
 
   @override
   _TicketPassState createState() => _TicketPassState();
@@ -146,11 +144,7 @@ class _TicketPassState extends State<TicketPass> {
                                           child: Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 20.0, vertical: 5),
-                                            child: widget
-                                                        .purchaserDetailsTile !=
-                                                    null
-                                                ? widget.purchaserDetailsTile
-                                                : ListTile(
+                                            child: ListTile(
                                                     leading: CircleAvatar(
                                                       child: Text(
                                                         name[0],
@@ -168,11 +162,7 @@ class _TicketPassState extends State<TicketPass> {
                                           child: Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 20.0, vertical: 5),
-                                            child: widget
-                                                        .purchaserDetailsTile !=
-                                                    null
-                                                ? widget.purchaserDetailsTile
-                                                : ListTile(
+                                            child: ListTile(
                                                     leading: CircleAvatar(
                                                       child: Text(
                                                         name[0],
