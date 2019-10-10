@@ -30,11 +30,12 @@ class MyApp extends StatelessWidget {
           child: TicketPass(
             alignment: Alignment.center,
             animationDuration: Duration(seconds: 2),
-            expansionChild: Container(
-              color: Colors.black,
-              height: 200,
-            ),
-            expandedHeight: 500,
+//            expansionChild: Expanded(
+//              child: Container(
+//                color: Colors.black,
+//              ),
+//            ),
+            expandedHeight: 600,
             expandIcon: CircleAvatar(
               maxRadius: 14,
               child: Icon(
@@ -55,12 +56,15 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             curve: Curves.easeOut,
             titleColor: Colors.blue,
-            shrinkIcon: CircleAvatar(
-              maxRadius: 14,
-              child: Icon(
-                Icons.keyboard_arrow_up,
-                color: Colors.white,
-                size: 20,
+            shrinkIcon: Align(
+              alignment: Alignment.centerRight,
+              child: CircleAvatar(
+                maxRadius: 14,
+                child: Icon(
+                  Icons.keyboard_arrow_up,
+                  color: Colors.white,
+                  size: 20,
+                ),
               ),
             ),
             ticketTitle: Text(
@@ -72,16 +76,116 @@ class MyApp extends StatelessWidget {
               ),
             ),
             titleHeight: 50,
-
-            width: 300,
-            height: 200,
+            width: 350,
+            height: 220,
             shadowColor: Colors.blue.withOpacity(0.5),
             elevation: 8,
             shouldExpand: true,
-            child: Container(
-              color: Colors.blue,
-              width: 10,
-            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:30.0,vertical: 5),
+              child: Container(
+                height: 140,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical:2.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      'Movie Time',
+                                      style: TextStyle(color: Colors.black.withOpacity(0.5)),
+                                    ),
+                                    Text(
+                                      '12:00 PM',
+                                      style: TextStyle(fontWeight: FontWeight.w600),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                                  children: <Widget>[
+                                    Text(
+                                      'Name',
+                                      style: TextStyle(
+                                        color: Colors.black.withOpacity(0.5),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Movie name',
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
+                                children: <Widget>[
+                                  Text(
+                                    'Date',
+                                    style: TextStyle(color: Colors.black.withOpacity(0.5)),
+                                  ),
+                                  Text(
+                                    '4th Nov,2019 ',
+                                    style: TextStyle(fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Expanded(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
+                                children: <Widget>[
+                                  Text(
+                                    'PRICE',
+                                    style: TextStyle(color: Colors.black.withOpacity(0.5)),
+                                  ),
+                                  Text(
+                                    '\$20 ',
+                                    style: TextStyle(fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            )
           ),
         ),
       ),

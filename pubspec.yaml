@@ -1,6 +1,6 @@
 name: ticket_pass_package
-description: A new Flutter package.
-version: 0.0.1
+description: A Flutter package to display the purchase of a ticket/pass along with additional details such as list of buyers.
+version: 0.1.0
 author: Goutham Kumar R <gouthamr1998@gmail.com>
 homepage: https://github.com/gouthamkumar253/flutter_ticket_pass
 
