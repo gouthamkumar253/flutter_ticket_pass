@@ -111,7 +111,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 ## Screenshots
-![](flutter_ticket_pass.gif)
+![](ticket_pass.gif)
 
 ## 👨 Developed By
 
